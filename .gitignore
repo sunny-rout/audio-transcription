@@ -1,0 +1,6 @@
+ffmpeg*
+ffmpeg/
+.vscode/
+output/
+uploads/
+__pycache__/
