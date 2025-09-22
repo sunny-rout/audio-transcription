@@ -49,7 +49,7 @@ Whisper and pydub need FFmpeg to handle audio.
 ffmpeg -version
 ```
 
-#### Linux/Mac:
+**Linux/Mac:**
 ```bash
 sudo apt-get install ffmpeg   # Ubuntu/Debian
 brew install ffmpeg           # Mac (Homebrew)
@@ -65,9 +65,28 @@ pip install torch torchvision torchaudio --extra-index-url https://download.pyto
 Follow instructions here: https://pytorch.org/get-started/locally/
 
 
+### 5. Configure the Transcriber (Optional)
+
+You can edit the `config.yaml` file to change default settings:
+```yaml
+# Default configuration for Audio Transcriber
+
+model: "base"          # tiny, base, small, medium, large
+language: "en"         # auto or specify language code
+output_dir: "output"
+log_level: "INFO"      # DEBUG, INFO, WARNING, ERROR
+chunk_duration: 300    # in seconds (for large files)
+```
+
 ## Usage
-Run the transcriber with:
+
+#### Transcribe a single file:
 ```
 python main.py path/to/audiofile.mp3
+```
+
+#### Transcribe multiple file:
+```
+python main.py path/to/audiofile.mp3, path/to/audiofile2.mp3
 ```
 The transcription will be saved in the output/ folder as a `.txt` file.
