@@ -4,3 +4,4 @@ ffmpeg/
 output/
 uploads/
 __pycache__/
+logs/

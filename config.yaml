@@ -1,0 +1,7 @@
+# Default configuration for Audio Transcriber
+
+model: "base"          # tiny, base, small, medium, large
+language: "en"         # auto or specify language code
+output_dir: "output"
+log_level: "INFO"      # DEBUG, INFO, WARNING, ERROR
+chunk_duration: 300    # in seconds (for large files)
